@@ -1,0 +1,38 @@
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view class="container">
+        <text>蓝牙连接状态：{{status}}</text>
+        <div class="button-lines">
+          <input type="text" placeholder="请输入设备名称" bindinput="onDeviceNameInput" />
+        </div>
+        <!-- 3x7 矩阵布局 -->
+        <view class="button-grid">
+            <view class="row">
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendUp" bindtouchend="handleTouchEnd">上</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="connectDevice">连接</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendA">A</button></view>
+                <view class="cell"></view>
+            </view>
+            <view class="row">
+                <view class="cell"><button bindtouchstart="sendLeft" bindtouchend="handleTouchEnd">左</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendRight" bindtouchend="handleTouchEnd">右</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendB">B</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendD">D</button></view>
+            </view>
+            <view class="row">
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendDown" bindtouchend="handleTouchEnd">下</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendData">文件</button></view>
+                <view class="cell"></view>
+                <view class="cell"><button bindtouchstart="sendC" >C</button></view>
+                <view class="cell"></view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
